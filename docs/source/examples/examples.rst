@@ -2,8 +2,9 @@
 Examples 
 ========
 .. toctree::  
-   :maxdepth: 1
+   :maxdepth: 2
 
    mpush/mpush
    powermeter/powermeter
    photomultiplier/photomultiplier
+   waverider/wind_example
