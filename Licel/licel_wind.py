@@ -278,9 +278,9 @@ class Waverider(TCP_util.util):
         The header and the 4 bytes payload size will be "consumed" by windV2Request
         all we are left with is 
         (4 bytes payload size padding +
-         4 bytes timestamp            +
-         4 bytes padding              +
-         8 bytes zero padding         +
+        4 bytes timestamp            +
+        4 bytes padding              +
+        8 bytes zero padding         +
         actual payload (8*2^15)         ). 
         4 + 8 + 8 + 8 * 2^15 = 262164 Bytes
 

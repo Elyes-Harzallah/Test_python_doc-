@@ -278,11 +278,11 @@ class EthernetController(TCP_util.util):
         '''
         Starts the MPUSH acquisition mode from configuration.
         Internally this function will: 
-            - Get the timestamp endianness \r\n
-            - Get hardware information for each active transient recorder in Config. \r\n
-            - Calculate the expected number of bytes to be received. \r\n
-            - Generate the MPUSH command depending on the Config.   \r\n
-            - Sends the generated MPUSH command to the controller. \r\n
+        - Get the timestamp endianness \r\n
+        - Get hardware information for each active transient recorder in Config. \r\n
+        - Calculate the expected number of bytes to be received. \r\n
+        - Generate the MPUSH command depending on the Config.   \r\n
+        - Sends the generated MPUSH command to the controller. \r\n
         
         :param shots: number of shots to be acquired 
         :type shots: int
