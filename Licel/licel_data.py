@@ -363,8 +363,8 @@ class DataParser:
         this is used to clear the ```pushBuffer`` if the data is invalid. 
         In the example below we want to remove the first line containing invalid raw data
         until the next occurrence of the xff xff delimiter marking the start of new data set:\r\n
-        ``1- <xff xff> <timestamp> <shots> <INVALID raw data> \r\n``
-        ``2- <xff xff> <timestamp><shots> <raw data> <xff xff>  ``
+        ``1- <xff xff> <timestamp> <shots> <INVALID raw data>`` \r\n
+        ``2- <xff xff> <timestamp><shots> <raw data> <xff xff>``
 
         :param pushBuffer: buffer containing raw data
         :type pushBuffer: bytearray

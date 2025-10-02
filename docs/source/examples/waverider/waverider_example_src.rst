@@ -1,5 +1,5 @@
 **Waverider source documentation** 
-================================
+====================================
 
 
 1. import modules 
@@ -90,7 +90,7 @@ the following are wrapper for low level interaction with the hardware.
     numFFT = waverider.getRangebins(MaxRange_meter,FFT_Size, samplingRate_hz)
 
 * **waverider.getRangebins(MaxRange_meter,FFT_Size, samplingRate_hz)** : Calculate the number of fft that needs to be computed,in order to acquire data up until the specified distance range. 
-this will internally calculate the timingresolution for a signle fft, and the lidar range resolution.
+    this will internally calculate the timingresolution for a signle fft, and the lidar range resolution.
 
 The timing resolution = sampling period X fftsize 
 
@@ -123,7 +123,7 @@ number of fft for a specified range = distance range / lidar Range Resolution
                                          shots, FFT_Size, waverider )
 
 * **licel_netCDF.Licel_Netcdf_Wrapper("filename.nc","w", "Waverider",numFFT, FFT_Size, num_trig)**: returns a Licel_Netcdf_Wrapper that will enables us to write data to a netcdf file. 
-the input parameters are as follows: 
+    the input parameters are as follows: 
     a. **"filename.nc"**: file name we want to create/ write to 
     b. **access mode**: "w" for writing to a file.
     c. **"Waverider"**: the device we acquire data from. this will have an impact on the data structure of the netcdf file.
@@ -134,7 +134,7 @@ the input parameters are as follows:
 * **waverider_NetCDF.fillGeoPositionInfo("Berlin", Latitude, Longitude,Altitude, azimuth, zenith )**: write the geographical information in the netcdf file.
 
 * **waverider_NetCDF.fillAcquisitionInfo(MaxRange_meter, samplingRate_hz,shots, FFT_Size, waverider )**: write acquisition information to netcdf file:
-the input paramters are as follows:
+    the input paramters are as follows:
     a. **MaxRange_meter**: maximum acquisition range in meters. 
     b. **samplingRate_hz**: sampling rate of the waverider in hertz.
     c. **shots**: the target number of shots.
@@ -151,7 +151,7 @@ the input paramters are as follows:
 * **waverider.getMSEC()**: get the waverider time in milliseconds.
 * **waverider_NetCDF.timestamp_start[:] = waverider.getMSEC()**: write the waverider time to netcdf.
 * **waverider_NetCDF.time_unix_to_epoch_1904()**: get the pc time and convert it to time since 1904 epoch. 
-current system start counting time since 1970, to be compatible with the Licel netcdf viewer, the time in netcdf file is written since 1904 epoch 
+    current system start counting time since 1970, to be compatible with the Licel netcdf viewer, the time in netcdf file is written since 1904 epoch 
 
 9. Reading data from the waverider and saving them to netcdf file.
 ---------------------------------------------------------------------------------------------------------
@@ -177,10 +177,10 @@ current system start counting time since 1970, to be compatible with the Licel n
 * **waverider.startAcq()**: the waverider will start the data acquisition. 
 
 * **waverider.isDataAvailable()**: asks the waverider is there any data to be read. 
-data is avaialbe when the requested number of shots is reached. 
+    data is avaialbe when the requested number of shots is reached. 
 
 * **waverider.getData(FFT_Size,numFFT)**: get the data from the waverider. this will return 2 numpy arrays.
-first numpy array contains a single element of type uint64 representing the data acquisition timestamp. 
+    first numpy array contains a single element of type uint64 representing the data acquisition timestamp. 
 
 the second numpyarray contains the powerSpectra data of type uint64. note that a single power spectra size is half of the fft size. 
 
